@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faith Connect - Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="font-sans m-0 p-0 box-border">
+     <!-- Login Section -->
+    <section
+      class="font-sans min-h-screen flex items-center justify-center p-3"
+    >
+      <div
+        class="bg-white rounded-3xl shadow-2xl flex overflow-hidden w-full min-h-[600px] flex-col md:flex-col lg:flex-row max-w-[100%] md:max-w-[600px] lg:max-w-[1000px]"
+      >
+        <!-- Image Panel Section - Hidden on mobile, visible on larger screens -->
+        <div
+          class="relative hidden sm:flex items-center justify-center p-6 sm:p-8 md:p-10 md:min-h-[200px]"
+        >
+          <div
+            class="flex gap-3 sm:gap-4 lg:gap-5 h-full max-h-[600px] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-100"
+          >
+            <div class="w-20 sm:w-24 md:w-28 lg:w-32 bg-cover bg-center">
+              <img
+                src="/images/panel1.png"
+                alt="image-panels"
+                class="w-full h-auto"
+              />
+            </div>
+            <div class="w-20 sm:w-24 md:w-28 lg:w-32 bg-cover bg-center">
+              <img
+                src="/images/panel2.png"
+                alt="image-panels"
+                class="w-full h-auto"
+              />
+            </div>
+            <div class="w-20 sm:w-24 md:w-28 lg:w-32 bg-cover bg-center">
+              <img
+                src="/images/panel3.png"
+                alt="image-panels"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Login Section -->
+        <div
+          class="flex-1 flex flex-col justify-center px-[20px] py-[30px] sm:px-[25px] sm:py-[35px] md:px-[40px] md:py-[50px] lg:px-[50px] lg:py-[60px]"
+        >
+          <div
+            class="flex items-center gap-3 mb-6 sm:mb-8 md:mb-10 justify-center"
+          >
+            <img
+              class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+              src="/images/Faith connect logo.png"
+              alt="Faith Connect Logo"
+            />
+          </div>
+
+          <h1
+            class="text-2xl sm:text-3xl font-bold text-black mb-6 sm:mb-8 tracking-tight text-center"
+          >
+            Login
+          </h1>
+
+          <form>
+            <div class="mb-4 sm:mb-5">
+              <input
+                type="email"
+                class="w-full px-[16px] sm:px-[18px] md:px-[20px] py-[14px] sm:py-[15px] md:py-[16px] bg-[#f5f5f5] rounded-3xl text-sm sm:text-base text-[#333] focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-200"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <div class="mb-4 sm:mb-5">
+              <input
+                type="password"
+                class="w-full px-[16px] sm:px-[18px] md:px-[20px] py-[14px] sm:py-[15px] md:py-[16px] bg-[#f5f5f5] rounded-3xl text-sm sm:text-base text-[#333] focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-200"
+                placeholder="Password"
+                required
+              />
+            </div>
+
+            <div class="text-right mb-4 sm:mb-5">
+              <a
+                class="text-gray-600 no-underline text-xs sm:text-sm hover:text-yellow-300 transition-colors duration-200"
+                href="#"
+                >Forgot password</a
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="w-full p-3 sm:p-4 bg-[#d7c970] rounded-3xl font-semibold cursor-pointer mb-6 sm:mb-8 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
+            >
+              Submit
+            </button>
+
+            <div
+              class="flex items-center justify-center my-[20px] sm:my-[25px] md:my-[30px] mx-0 text-black text-xs sm:text-sm"
+            >
+              <p class="flex items-center gap-[8px] sm:gap-[10px] font-[600]">
+                <span
+                  class="block w-[60px] sm:w-[70px] md:w-[80px] h-[1px] bg-black"
+                ></span
+                >Or Login With<span
+                  class="block w-[60px] sm:w-[70px] md:w-[80px] h-[1px] bg-black"
+                ></span>
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="w-full p-3 sm:p-4 bg-white font-semibold cursor-pointer hover:shadow-lg transition-all duration-200 border border-gray-200 rounded-3xl"
+            >
+              <img
+                src="/images/Google.png"
+                alt="Google Icon"
+                class="object-contain w-[150px] h-[50px] sm:w-[180px] sm:h-[60px] md:w-[200px] md:h-[75px] inline-block mr-2"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    </body>
+</html>

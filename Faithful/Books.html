@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Connect Books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F2EFF9] h-screen overflow-hidden text-gray-800 font-sans">
+    <div
+      class="flex w-full max-w-[95%] h-[95vh] my-4 mx-auto border border-gray-300 rounded-2xl overflow-hidden shadow-lg"
+    >
+     <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="bg-white shadow-md flex flex-col justify-between transition-all duration-300 w-[220px]"
+      >
+        <div>
+          <!-- Sidebar Logo + Hamburger -->
+          <div class="flex items-center justify-between px-4 py-6">
+            <a href="/landingpage.html">
+            <img
+              id="sidebar-logo"
+              src="/images/Faith connect logo.png"
+              alt="Faith Connect Logo"
+              class="w-24"
+            />
+            </a>
+            <button id="hamburger" class="text-gray-600 hover:text-[#F4B840]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Sidebar Nav -->
+          <nav class="flex flex-col gap-6 px-4">
+            <a href="/Faithful/index.html" class="flex items-center gap-3 hover:text-[#F4B840]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 shrink-0 transition-all duration-300"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="7" height="9" x="3" y="3" rx="1" />
+                <rect width="7" height="5" x="14" y="3" rx="1" />
+                <rect width="7" height="9" x="14" y="12" rx="1" />
+                <rect width="7" height="5" x="3" y="16" rx="1" />
+              </svg>
+              <span class="sidebar-label transition-all duration-300"
+                >Dashboard</span
+              >
+            </a>
+
+            <a
+              href="/Faithful/podcast.html"
+              class="flex items-center gap-3 hover:text-[#F4B840]"
+            >
+              <svg
+                class="w-5 h-5 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M16.85 18.58a9 9 0 1 0-9.7 0" />
+                <path d="M8 14a5 5 0 1 1 8 0" />
+                <circle cx="12" cy="11" r="1" />
+                <path d="M13 17a1 1 0 1 0-2 0l.5 4.5a.5.5 0 1 0 1 0Z" />
+              </svg>
+              <span class="sidebar-label">Podcasts</span>
+            </a>
+
+            <a href="/Faithful/Books.html" class="group flex items-center justify-center lg:justify-start gap-3 text-white bg-[#F4B840] rounded-full px-4 py-2 transition-all duration-300"
+            >
+              <svg
+                class="w-5 h-5 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <rect width="8" height="18" x="3" y="3" rx="1" />
+                <path d="M7 3v18" />
+                <path
+                  d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z"
+                />
+              </svg>
+              <span class="sidebar-label">Books</span>
+            </a>
+
+            <a href="/Faithful/Blog.html" class="flex items-center gap-3 hover:text-[#F4B840]">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <!-- Rectangle Frame -->
+  <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" fill="none" />
+
+  <!-- Text Lines -->
+  <line x1="6" y1="7.5" x2="18" y2="7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="6" y1="10" x2="15" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="6" y1="12.5" x2="12" y2="12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Diagonal Pen in Bottom Right -->
+  <path d="M14.5 16.5l2.5 2.5m0 0L16.5 21l2.5-2.5m-2.5-2.5L19 15a.5.5 0 00-.7-.7l-2.3 2.2z" 
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              <span class="sidebar-label">Blog</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 hover:text-[#F4B840]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-icon lucide-user"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <span class="sidebar-label">Profile</span>
+            </a>
+
+            <a href="#" class="flex items-center gap-3 hover:text-[#F4B840]">
+              <svg
+                class="w-5 h-5 shrink-0"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 9.5L12 4l9 5.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"
+                />
+              </svg>
+              <span class="sidebar-label">Home</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div
+          class="flex items-center gap-2 px-4 py-6 text-gray-500 hover:text-[#F4B840] cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-info-icon lucide-info"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 16v-4" />
+            <path d="M12 8h.01" />
+          </svg>
+          <span class="sidebar-label">About</span>
+        </div>
+      </aside>
+       <!-- Main Content -->
+      <main class="flex-1 px-4 overflow-auto">
+    <!-- Top Bar -->
+        <div class="flex justify-between items-center ">
+          <div class="flex items-center gap-4">
+            <a href="/landingpage.html">
+            <img
+              id="topbar-logo"
+              src="/images/Faith connect logo.png"
+              alt="Faith Connect Logo"
+              class="w-24 hidden"
+            />
+            </a>
+            <h1 class="text-3xl font-bold">Books</h1>
+          </div>
+           <div class="flex items-center gap-4">
+            <button class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="w-6 h-6"
+              >
+                <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                <path
+                  d="M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665"
+                />
+                <circle cx="18" cy="8" r="3" />
+              </svg>
+              <span
+                class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"
+              ></span>
+            </button>
+            <div class="flex items-center gap-2 rounded-l-2xl bg-white shadow-md">
+              <img
+                src="https://i.pravatar.cc/40"
+                class="w-10 h-10 rounded-full"
+                alt="Profile"
+              />
+              <div>
+                <p class="text-sm font-medium">Adinoyi Faithful</p>
+                <p class="text-xs text-gray-500">adinoyifaithful@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          </div>
+     
+<!-- Main Banner Container -->
+<div class="relative w-full mt-4 flex justify-center">
+  <div class="relative w-full max-w-2xl rounded-md overflow-visible">
+    
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 rounded-md overflow-hidden">
+      <img src="/Faithful/images/Bookbg.png" alt="Book pattern" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Banner Content -->
+    <div class="relative flex items-center justify-between px-3 py-3 sm:px-4 z-10">
+      <!-- Quote Text -->
+      <div class="flex-1">
+        <h1 class="text-sm sm:text-base md:text-lg font-semibold leading-snug text-black">
+          A Book Is A Gift You Can Open<br />Again and Again.
+        </h1>
+      </div>
+
+      <!-- Book Image - Slightly Outside -->
+      <div class="absolute right-[-50px] top-1/2 transform -translate-y-1/2 z-20">
+        <img
+          src="/Faithful/images/Stack of  books.png"
+          alt="Stack of books"
+          class="w-16 h-14 sm:w-20 sm:h-16 md:w-32 md:h-[220px] object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Search Bar -->
+<div class="relative w-[35%] mt-1.5">
+  <!-- Search Icon -->
+  <div class="absolute left-2.5 top-1/2 transform -translate-y-1/2 text-gray-400">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-search"
+    >
+      <path d="m21 21-4.34-4.34" />
+      <circle cx="11" cy="11" r="8" />
+    </svg>
+  </div>
+
+  <!-- Search Input -->
+  <input
+    type="text"
+    placeholder="Search Books"
+    class="w-full text-sm rounded-full border border-gray-300 px-3 py-1.5 pl-8 shadow-sm focus:outline-none focus:ring-1 focus:ring-orange-400"
+  />
+</div>
+
+
+
+  <!-- Book Categories -->
+  <div>
+    <h3 class="text-xl font-semibold text-gray-800 mb-4">Book Categories</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="space-y-2">
+        <img src="/Faithful/images/Faith Building Stories.png" class="rounded-tl-lg rounded-br-lg shadow w-24" alt="Faith Books" />
+        <h4 class="font-medium">Faith Building Stories</h4>
+      </div>
+      <div class="space-y-2 ">
+        <img src="/Faithful/images/Fictional Books.png" class="rounded-tl-lg rounded-br-lg shadow w-24 bg-[#e8c270]" alt="Fictional Books" />
+      <h4 class="font-medium">Fictional Books</h4>
+     </div>
+      <div class="space-y-2">
+        <img src="/Faithful/images/Non-Fictional Stories.png" class="rounded-tl-lg rounded-br-lg shadow w-24" alt="Non-Fictional Books" />
+        <h4 class="font-medium">Non-Fictional Books</h4>
+      </div>
+      <div class="space-y-2">
+        <img src="/Faithful/images/Children Stories.png" class="rounded-tl-lg rounded-br-lg shadow w-24 bg-[#e8c270]" alt="Children Books" />
+        <h4 class="font-medium">Children Stories</h4>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Bottom Section -->
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+  <!-- Trending Authors -->
+  <div class="bg-white p-2 rounded-lg shadow space-y-2">
+    <div class="border-b border-black pb-0.5">
+      <h4 class="text-sm font-semibold">Trending Authors</h4>
+    </div>
+    <div class="space-y-1 text-xs">
+      <div class="flex items-center gap-1.5 p-1 bg-gray-50 rounded-md shadow-md justify-between">
+        <div class="flex items-center gap-1.5">
+          <img src="/Faithful/images/Adeboye.png" alt="E.A. Adeboye" class="w-6 h-6 rounded-full object-cover border border-gray-300" />
+          <div class="flex flex-col">
+            <p class="font-medium">E.A. Adeboye</p>
+            <p class="text-gray-400 text-[10px]">115 Books</p>
+          </div>
+        </div>
+        <p class="text-gray-500 text-[10px]">245 Subscribed</p>
+      </div>
+      <div class="flex items-center gap-1.5 p-1 bg-[#e8c270] rounded-md shadow-md justify-between">
+        <div class="flex items-center gap-1.5">
+          <img src="/Faithful/images/Meyer.png" alt="Joyce Meyer" class="w-6 h-6 rounded-full object-cover border border-gray-300" />
+          <div class="flex flex-col">
+            <p class="font-medium">Joyce Meyer</p>
+            <p class="text-gray-400 text-[10px]">70 Books</p>
+          </div>
+        </div>
+        <p class="text-gray-500 text-[10px]">175 Subscribed</p>
+      </div>
+      <div class="flex items-center gap-1.5 p-1 bg-gray-50 rounded-md shadow-md justify-between">
+        <div class="flex items-center gap-1.5">
+          <img src="/Faithful/images/Jakes.png" alt="T.D Jakes" class="w-6 h-6 rounded-full object-cover border border-gray-300" />
+          <div class="flex flex-col">
+            <p class="font-medium">T.D Jakes</p>
+            <p class="text-gray-400 text-[10px]">105 Books</p>
+          </div>
+        </div>
+        <p class="text-gray-500 text-[10px]">132 Subscribed</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Reads -->
+  <div class="bg-white p-2 rounded-lg shadow space-y-2">
+    <div class="border-b border-black pb-0.5">
+      <h4 class="text-sm font-semibold">Popular Reads</h4>
+    </div>
+    <div class="space-y-1 text-xs">
+      <div class="flex gap-1.5 items-start bg-gray-50 p-1 rounded-md">
+        <img src="/Faithful/images/Reads1.png" alt="Warrior's Journey" class="w-12 h-16 object-cover rounded shadow-md" />
+        <div>
+          <p class="font-semibold leading-tight text-xs">The story of a warrior's journey...</p>
+          <p class="text-gray-500 text-[10px]">Author: Francine Rivers</p>
+        </div>
+      </div>
+      <div class="flex gap-1.5 items-start p-1 bg-[#e8c270] rounded-md">
+        <img src="/Faithful/images/Reads2.png" alt="Mathematics of Greatness" class="w-12 h-16 object-cover rounded shadow-md" />
+        <div>
+          <p class="font-semibold leading-tight text-xs">The Mathematics of Greatness...</p>
+          <p class="text-gray-500 text-[10px]">Author: E.A. Adeboye</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Of The Week -->
+  <div class="bg-white p-2 rounded-lg shadow space-y-2">
+    <div class="border-b border-black pb-0.5">
+      <h4 class="text-sm font-semibold">Book Of The Week!</h4>
+    </div>
+    <div class="flex gap-2">
+      <img src="/Faithful/images/Book of the week.png" alt="The Days of Joseph" class="w-16 h-24 object-cover rounded shadow" />
+      <div class="space-y-0.5">
+        <p class="font-bold text-black text-xs">The Days of Joseph</p>
+        <p class="text-gray-700 text-sm">By Noble, John</p>
+        <p class="text-gray-600 leading-tight text-base">When two of his brothers launch a vicious raid... enemies on every side.</p>
+        <p class="text-yellow-500 text-sm">★★★★★ <span class="text-gray-400">4.5 ratings</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </main>
+      
+      <!-- JS -->
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+        const labels = document.querySelectorAll(".sidebar-label");
+        const sidebarLogo = document.getElementById("sidebar-logo");
+        const topbarLogo = document.getElementById("topbar-logo");
+
+        hamburger.addEventListener("click", () => {
+          const isCollapsed = sidebar.classList.contains("w-[70px]");
+          sidebar.classList.toggle("w-[220px]", isCollapsed);
+          sidebar.classList.toggle("w-[70px]", !isCollapsed);
+          labels.forEach((label) => label.classList.toggle("hidden"));
+          sidebarLogo.classList.toggle("hidden", !isCollapsed);
+          topbarLogo.classList.toggle("hidden", isCollapsed);
+        });
+        </script>
+    </div>
+</body>
+</html>

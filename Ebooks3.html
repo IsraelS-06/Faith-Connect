@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="m-0 p-0 box-border font-sans bg-white">
+  <header class="bg-[radial-gradient(#F1EFE3,#D9D9D9)] rounded-b-[60px] md:rounded-b-[90px] pb-12">
+    <nav class="px-6 pt-6">
+      <a href="books.html" target="_blank" class="inline-block">
+        <img src="images/arrowLeft.png" class="w-6 h-6 md:w-10 md:h-10" />
+      </a>
+    </nav>
+
+    <div class="flex flex-col items-center text-center md:text-left px-6">
+      <div class="flex flex-col md:flex-row justify-between w-full items-center md:items-start mt-4">
+        <div>
+          <h1 class="text-2xl md:text-3xl font-semibold">Ebooks</h1>
+          <p class="text-2xl md:text-3xl">Book Recommendation</p>
+        </div>
+        <div class="flex gap-4 mt-4 md:mt-0 items-center">
+          <img src="images/rivers.png" alt="Francine Rivers" class="w-16 h-16 md:w-20 md:h-20" />
+          <div>
+            <h3 class="text-2xl md:text-3xl">Francine Rivers</h3>
+            <h3 class="text-2xl md:text-3xl">Author</h3>
+          </div>
+        </div>
+      </div>
+
+      <q class="text-lg md:text-2xl w-full md:w-1/2 mt-6 block leading-relaxed">
+        As sure as the Dawn tells the story of a warrior's journey to faith, revealing how God's love transforms pride, pain, and doubts into purpose and redemption.
+      </q>
+
+      <a href="books.html" class="bg-white text-[20px] md:text-[32px] gap-2 flex items-center mt-[30px]">
+        View All
+        <img src="images/arrowRight.png" class="w-4 h-4 md:w-5 md:h-5" />
+      </a>
+    </div>
+  </header>
+
+  <section class="mt-[-80px] md:mt-[-100px] px-[5%]">
+    <div class="flex flex-col justify-center items-center">
+      <!-- Responsive book grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-[20px] mt-[50px] w-full">
+        <div>
+          <a href="/Books.html">          
+            <figure>
+            <img src="images/kenneth.png" alt="kenneth book" class="w-[200px] md:w-[264px] h-auto md:h-[394px]">
+            <figcaption class="text-xl md:text-2xl mt-[10px] text-center">Kenneth E. Hagin</figcaption>
+          </figure>
+          </a>
+
+        </div>
+        <div>
+          <a href="/Ebooks1.html">
+          <figure>
+            <img src="images/john.png" alt="john book" class="w-[200px] md:w-[264px] h-auto md:h-[394px]">
+            <figcaption class="text-xl md:text-2xl mt-[10px] text-center">The Pilgrim's Progress</figcaption>
+          </figure>
+          </a>
+        </div>
+        <div>
+          <a href="/Ebooks2.html">
+          <figure>
+            <img src="images/general.png" alt="Anatomy of greatness" class="w-[200px] md:w-[264px] h-auto md:h-[394px]">
+            <figcaption class="text-xl md:text-2xl mt-[10px] text-center">Pastor E.A. Adeboye</figcaption>
+          </figure>
+          </a>
+        </div>
+        <div>
+          <a href="/Ebooks3.html">
+          <figure>
+            <img src="images/dawn.png" alt="Sure is the dawn" class="w-[200px] md:w-[264px] h-auto md:h-[394px]">
+            <figcaption class="text-xl md:text-2xl mt-[10px] text-center">Francine Rivers</figcaption>
+          </figure>
+          </a>
+        </div>
+      </div>
+
+      <!-- Book Category Heading -->
+      <h2 class="text-3xl md:text-4xl font-semibold mt-10">Book Category</h2>
+    </div>
+  </section>
+</body>
+
+</html>
