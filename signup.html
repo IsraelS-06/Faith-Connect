@@ -85,9 +85,9 @@
 
             <button
               type="submit"
-              class="w-full p-3 sm:p-4 bg-[#d7c970] rounded-3xl font-semibold cursor-pointer mb-6 sm:mb-8 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
+              class="w-full p-3 sm:p-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-3xl font-bold cursor-pointer mb-6 sm:mb-8 hover:shadow-lg transition-all duration-200 text-sm sm:text-base"
             >
-              Submit
+              Create Account
             </button>
 
             <button
@@ -144,5 +144,25 @@
         </div>
       </div>
     </section>
+
+    <script src="/js/faith-store.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const fullName = document.getElementById('full-name')?.value?.trim() || 'Faithful Believer';
+          const email = document.getElementById('email')?.value?.trim() || 'member@faithconnect.org';
+          
+          if (window.FaithStore) {
+            window.FaithStore.setUser({ name: fullName, email: email });
+            window.FaithStore.toast(`Account created! Welcome, ${fullName}`, 'success');
+          }
+          setTimeout(() => {
+            window.location.href = '/Faithful/index.html';
+          }, 450);
+        });
+      }
+    </script>
   </body>
 </html>

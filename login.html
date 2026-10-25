@@ -137,5 +137,26 @@
         </div>
       </div>
     </section>
-    </body>
+
+    <script src="/js/faith-store.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = form.querySelector('input[type="email"]')?.value || 'member@faithconnect.org';
+          const name = email.split('@')[0].replace(/[._-]/g, ' ');
+          const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
+          
+          if (window.FaithStore) {
+            window.FaithStore.setUser({ name: formattedName, email: email });
+            window.FaithStore.toast(`Welcome back, ${formattedName}!`, 'success');
+          }
+          setTimeout(() => {
+            window.location.href = '/Faithful/index.html';
+          }, 400);
+        });
+      }
+    </script>
+  </body>
 </html>

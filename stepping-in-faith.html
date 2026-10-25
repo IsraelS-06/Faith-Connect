@@ -137,11 +137,11 @@
             </p>
 
             <div class="flex flex-wrap items-center gap-4">
-              <button class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all">
+              <button type="button" data-podcast-play data-title="No Longer Bound" data-speaker="Walter &amp; Shane" data-show="Stepping In Faith" data-image="images/stepping.png" data-duration="2400" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all cursor-pointer">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
                 Play Latest Episode
               </button>
-              <button class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors">
+              <button type="button" onclick="window.FaithStore.toggleBookmark({ id: 'show-stepping-in-faith', type: 'podcast', title: 'Stepping In Faith', author: 'Walter &amp; Shane', image: 'images/stepping.png', category: 'Podcast', url: '/stepping-in-faith.html' });" class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors cursor-pointer">
                 <span class="text-lg leading-none">+</span> Follow Show
               </button>
             </div>
@@ -165,7 +165,7 @@
                 What does it truly mean to be free from sin? In this deeply reflective episode, Walter and Shane confront a paradox many believers face: calling Christ "Lord" while remaining enslaved to sinful patterns. Drawing from Romans 7 and 8.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="No Longer Bound" data-speaker="Walter &amp; Shane" data-show="Stepping In Faith" data-image="images/stepping.png" data-duration="2400" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -179,7 +179,7 @@
                 Have you ever experienced a connection that defied logical explanation? Our testimony reveals how God orchestrated a meeting between two unlikely people, creating an unbreakable spiritual bond.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="What God Joined Together: Part One" data-speaker="Walter &amp; Shane" data-show="Stepping In Faith" data-image="images/stepping.png" data-duration="2760" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -193,7 +193,7 @@
                 A powerful spiritual awakening unfolds as Walter and Shane share Part 2 of their extraordinary testimony, transforming separation into supernatural reunion.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="What God Joined Together: Part Two" data-speaker="Walter &amp; Shane" data-show="Stepping In Faith" data-image="images/stepping.png" data-duration="3000" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -310,5 +310,7 @@
     </footer>
 
     <script src="/js/nav.js"></script>
+    <script src="/js/faith-store.js"></script>
+    <script src="/js/player.js"></script>
   </body>
 </html>
