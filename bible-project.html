@@ -138,11 +138,11 @@
             </p>
 
             <div class="flex flex-wrap items-center gap-4">
-              <button class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all">
+              <button type="button" data-podcast-play data-title="Pentecost and the Expected Unexpected Spirit" data-speaker="Tim Mackie &amp; Jon Collins" data-show="Bible Project" data-image="images/bible-project.png" data-duration="3240" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all cursor-pointer">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
                 Play Latest Episode
               </button>
-              <button class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors">
+              <button type="button" onclick="window.FaithStore.toggleBookmark({ id: 'show-bible-project', type: 'podcast', title: 'The Bible Project Podcast', author: 'Tim Mackie &amp; Jon Collins', image: 'images/bible-project.png', category: 'Podcast', url: '/bible-project.html' });" class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors cursor-pointer">
                 <span class="text-lg leading-none">+</span> Follow Show
               </button>
             </div>
@@ -166,7 +166,7 @@
                 The story of Pentecost in Acts 2 is brimming with rich imagery and hyperlinks from the Hebrew Bible. God's Spirit dramatically fills a house of Jesus' followers like a wind, and fire burns over the disciples' heads.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="Pentecost and the Expected Unexpected Spirit" data-speaker="Tim Mackie &amp; Jon Collins" data-show="Bible Project" data-image="images/bible-project.png" data-duration="3240" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -180,7 +180,7 @@
                 How the Bible was Formed E4 – We focus on the formation of the New Testament manuscripts, apostolic authority, and the preservation of the Gospel accounts across the centuries.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="How Did the New Testament Come to Be?" data-speaker="Tim Mackie &amp; Jon Collins" data-show="Bible Project" data-image="images/bible-project.png" data-duration="3720" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -194,7 +194,7 @@
                 How the Bible Was Formed E3 – The Hebrew Bible went through an iterative development process with ancient scribes and prophets. Discover how these scrolls were woven into a single narrative.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="When Was the Hebrew Bible Finished?" data-speaker="Tim Mackie &amp; Jon Collins" data-show="Bible Project" data-image="images/bible-project.png" data-duration="4080" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -311,5 +311,7 @@
     </footer>
 
     <script src="/js/nav.js"></script>
+    <script src="/js/faith-store.js"></script>
+    <script src="/js/player.js"></script>
   </body>
 </html>

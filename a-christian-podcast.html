@@ -137,11 +137,11 @@
             </p>
 
             <div class="flex flex-wrap items-center gap-4">
-              <button class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all">
+              <button type="button" data-podcast-play data-title="Don't Waste the Blood | A Testimony of Grace" data-speaker="Kevin Wilson" data-show="A Christian Podcast" data-image="images/christian.png" data-duration="2700" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all cursor-pointer">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
                 Play Latest Episode
               </button>
-              <button class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors">
+              <button type="button" onclick="window.FaithStore.toggleBookmark({ id: 'show-kevin-wilson', type: 'podcast', title: 'A Christian Podcast with Kevin Wilson', author: 'Kevin Wilson', image: 'images/christian.png', category: 'Podcast', url: '/a-christian-podcast.html' });" class="inline-flex items-center gap-1.5 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold text-sm transition-colors cursor-pointer">
                 <span class="text-lg leading-none">+</span> Follow Show
               </button>
             </div>
@@ -165,7 +165,7 @@
                 Kevin and guests unpack the profound significance of the cross, overcoming hardship, and allowing God's redemption to heal our wounds in every season.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="Don't Waste the Blood | A Testimony of Grace" data-speaker="Kevin Wilson" data-show="A Christian Podcast" data-image="images/christian.png" data-duration="2700" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -179,7 +179,7 @@
                 A frank, heart-to-heart conversation on dealing with stress, life transitions, and finding Jesus as our constant anchor during uncertain times.
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="Hope In The Storm | Faith &amp; Mental Health" data-speaker="Kevin Wilson" data-show="A Christian Podcast" data-image="images/christian.png" data-duration="2280" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -193,7 +193,7 @@
                 Gabriel Harris joins Kevin to talk about worship beyond Sunday mornings: what does worship look like at work, in our homes, and in our daily choices?
               </p>
             </div>
-            <button class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-4 py-2.5 rounded-full shadow-sm transition-all">
+            <button type="button" data-podcast-play data-title="My Everyday Worship | Sacred in the Ordinary" data-speaker="Kevin Wilson &amp; Gabriel Harris" data-show="A Christian Podcast" data-image="images/christian.png" data-duration="2460" class="shrink-0 inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition-all cursor-pointer">
               Play Episode
             </button>
           </div>
@@ -310,5 +310,7 @@
     </footer>
 
     <script src="/js/nav.js"></script>
+    <script src="/js/faith-store.js"></script>
+    <script src="/js/player.js"></script>
   </body>
 </html>

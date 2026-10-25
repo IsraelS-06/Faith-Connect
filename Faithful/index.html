@@ -188,11 +188,11 @@
               class="w-24 hidden"
             />
             </a>
-            <h1 class="text-3xl font-bold">Welcome!</h1>
+            <h1 id="dashboard-welcome-heading" class="text-3xl font-bold">Welcome!</h1>
           </div>
           <div class="flex items-center gap-4">
-            <!-- Notifications and Profile (unchanged) -->
-            <button class="relative">
+            <!-- Notifications and Profile -->
+            <button class="relative" aria-label="Notifications">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -203,7 +203,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-6 h-6"
+                class="w-6 h-6 text-gray-600"
               >
                 <path d="M10.268 21a2 2 0 0 0 3.464 0" />
                 <path
@@ -212,18 +212,16 @@
                 <circle cx="18" cy="8" r="3" />
               </svg>
               <span
-                class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"
+                class="absolute top-0 right-0 w-2 h-2 bg-amber-500 rounded-full"
               ></span>
             </button>
-            <div class="flex items-center gap-2 rounded-l-2xl shadow-md">
-              <img
-                src="https://i.pravatar.cc/40"
-                class="w-10 h-10 rounded-full"
-                alt="Profile"
-              />
+            <div class="flex items-center gap-2 p-1.5 px-3 bg-white rounded-2xl shadow-sm border border-gray-100">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-white flex items-center justify-center font-bold text-sm">
+                FC
+              </div>
               <div>
-                <p class="text-sm font-medium">Adinoyi Faithful</p>
-                <p class="text-xs text-gray-500">adinoyifaithful@gmail.com</p>
+                <p class="text-sm font-bold text-gray-900 dashboard-user-name">Adinoyi Faithful</p>
+                <p class="text-xs text-gray-500 dashboard-user-email">adinoyifaithful@gmail.com</p>
               </div>
             </div>
           </div>
@@ -251,11 +249,11 @@
                 </div>
 
                 <!-- Subtitle -->
-                <p class="text-sm text-gray-400 mt-1">Listened to This Week</p>
+                <p class="text-sm text-gray-400 mt-1">Saved Podcasts</p>
 
                 <!-- Number + Yellow Line -->
                 <div class="flex items-center justify-end mt-1">
-                  <h2 class="text-xl font-bold pr-2">54</h2>
+                  <h2 id="stat-podcast-count" class="text-xl font-bold pr-2">1</h2>
                   <div class="w-1 h-6 bg-yellow-400 rounded-sm"></div>
                 </div>
               </div>
@@ -279,11 +277,11 @@
                 </div>
 
                 <!-- Subtitle -->
-                <p class="text-sm text-gray-400 mt-1">Read This Week</p>
+                <p class="text-sm text-gray-400 mt-1">Saved Books</p>
 
                 <!-- Number + Yellow Line -->
                 <div class="flex items-center justify-end mt-1">
-                  <h2 class="text-xl font-bold pr-2">20</h2>
+                  <h2 id="stat-books-count" class="text-xl font-bold pr-2">1</h2>
                   <div class="w-1 h-6 bg-yellow-400 rounded-sm"></div>
                 </div>
               </div>
@@ -359,80 +357,51 @@
               </button>
             </div>
 
-            <div class="grid grid-cols-2 gap-2">
-              <div class="bg-white p-1 rounded-xl shadow row-span-2">
-                <h3 class="text-lg font-bold mb-1">Top Users</h3>
-                <ul class="space-y-1">
-                  <li
-                    class="flex items-center gap-3 top-user cursor-pointer transition-colors duration-300 bg-gray-100 p-2 rounded-xl"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/40?img=1"
-                      class="w-10 h-10 rounded-full"
-                      alt="Sharon Blue"
-                    />
-                    <div class="flex-1">
-                      <p class="text-sm font-medium">Sharon Blue</p>
-                      <p class="text-xs text-[#eeb226]">sharonblue@gmail.com</p>
-                      <p class="text-sm font-semibold text-gray-700 mt-1">
-                        45%
-                      </p>
+            <!-- Saved Library & Private Journal Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-2">
+              
+              <!-- Saved Library Box -->
+              <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between pb-2 border-b border-gray-100 mb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                      <h3 class="font-extrabold text-sm text-gray-900">My Saved Library</h3>
                     </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-3 top-user cursor-pointer transition-colors duration-300 bg-gray-100 p-2 rounded-xl"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/40?img=2"
-                      class="w-10 h-10 rounded-full"
-                      alt="Stephen Wilson"
-                    />
-                    <div class="flex-1">
-                      <p class="text-sm font-medium">Stephen Wilson</p>
-                      <p class="text-xs text-[#eeb226]">
-                        stephenwilson@gmail.com
-                      </p>
-                      <p class="text-sm font-semibold text-gray-700 mt-1">
-                        34%
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-3 top-user cursor-pointer transition-colors duration-300 bg-gray-100 p-2 rounded-xl"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/40?img=3"
-                      class="w-10 h-10 rounded-full"
-                      alt="Ajibola Praise"
-                    />
-                    <div class="flex-1">
-                      <p class="text-sm font-medium">Ajibola Praise</p>
-                      <p class="text-xs text-[#eeb226]">
-                        ajibolapraise@gmail.com
-                      </p>
-                      <p class="text-sm font-semibold text-gray-700 mt-1">
-                        25%
-                      </p>
-                    </div>
-                  </li>
-                  <li
-                    class="flex items-center gap-3 top-user cursor-pointer transition-colors duration-300 bg-gray-100 p-2 rounded-xl"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/40?img=4"
-                      class="w-10 h-10 rounded-full"
-                      alt="David Wright"
-                    />
-                    <div class="flex-1">
-                      <p class="text-sm font-medium">David Wright</p>
-                      <p class="text-xs text-[#eeb226]">davidwright@gmail.com</p>
-                      <p class="text-sm font-semibold text-gray-700 mt-1">
-                        18%
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+                    <a href="/Books.html" class="text-[11px] font-bold text-amber-600 hover:text-amber-700">Browse Catalog &rarr;</a>
+                  </div>
+                  <div id="dashboard-saved-library" class="space-y-2">
+                    <!-- Populated by dashboard.js -->
+                  </div>
+                </div>
               </div>
+
+              <!-- Private Devotional Journal Box -->
+              <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between pb-2 border-b border-gray-100 mb-3">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                      <h3 class="font-extrabold text-sm text-gray-900">Prayer Journal &amp; Notes</h3>
+                    </div>
+                    <span class="text-[11px] text-gray-400">Private</span>
+                  </div>
+
+                  <form id="dashboard-journal-form" class="mb-3">
+                    <div class="flex gap-2">
+                      <input id="journal-note-input" type="text" placeholder="Write today's reflection, prayer, or revelation..." class="flex-1 px-3 py-1.5 text-xs rounded-xl border border-gray-200 focus:outline-none focus:border-amber-500" required />
+                      <button type="submit" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs rounded-xl shadow-xs transition-colors">
+                        Save
+                      </button>
+                    </div>
+                  </form>
+
+                  <div id="dashboard-journal-list" class="space-y-2 max-h-48 overflow-y-auto">
+                    <!-- Populated by dashboard.js -->
+                  </div>
+                </div>
+              </div>
+            </div>
 
               <div class="bg-white p-2 rounded-xl shadow-lg max-w-sm">
                 <!-- Header with title and date selector -->
@@ -714,5 +683,7 @@
         topbarLogo.classList.toggle("hidden", isCollapsed);
       });
     </script>
+    <script src="/js/faith-store.js"></script>
+    <script src="/js/dashboard.js"></script>
   </body>
 </html>
