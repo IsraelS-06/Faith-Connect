@@ -1,63 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Faith Connect</title>
+    <meta name="description" content="Learn about the vision, mission, and heart behind Faith Connect — connecting believers and strengthening faith worldwide." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="m-0 p-0 box-border font-sans bg-white">
-  <section class="font-sans leading-relaxed text-[#333] overflow-x-hidden">
-    <!-- Navigation -->
-    <nav class="flex flex-wrap justify-between items-center px-6 md:px-[5%] py-4 bg-white shadow-md fixed top-0 w-full z-40">
-      <div class="w-24 md:w-32">
-        <a href="/index.html">
-        <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="w-full h-auto" />
-        </a>
-      </div>
-      <ul class="hidden md:flex gap-10 lg:gap-20 list-none items-center">
-        <li><a class="text-xl md:text-2xl lg:text-3xl text-[#333] font-medium hover:text-[#f39c12]" href="/Podcast.html">Podcast</a></li>
-        <li><a class="text-xl md:text-2xl lg:text-3xl text-[#333] font-medium hover:text-[#f39c12]" href="/Books.html">Books</a></li>
-        <li><a class="text-xl md:text-2xl lg:text-3xl text-[#333] font-medium hover:text-[#f39c12]" href="/Blog.html">Blogs</a></li>
-        <li><a class="text-xl md:text-2xl lg:text-3xl text-[#333] font-medium hover:text-[#f39c12]" href="/about.html">About Us</a></li>
-      </ul>
-      <div class="mt-2 md:mt-0">
-        <a href="/signup.html">
-        <button class="bg-[#feb825] text-black font-bold underline px-4 py-2 sm:py-3 rounded-2xl rounded-br-none inline-block shadow-md">Sign Up</button>
-        </a>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      .font-serif-quote {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 box-border bg-[#FCFBF7] text-[#222] overflow-x-hidden antialiased">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm fixed top-0 w-full z-50 transition-all duration-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 transition-transform hover:scale-102">
+            <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-10 sm:h-12 w-auto object-contain" />
+          </a>
+
+          <ul class="hidden md:flex items-center gap-8 lg:gap-10 list-none">
+            <li><a href="/index.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Home</a></li>
+            <li><a href="/Podcast.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Podcast</a></li>
+            <li><a href="/Books.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Books</a></li>
+            <li><a href="/Blog.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Blogs</a></li>
+            <li><a href="/about.html" class="font-semibold text-amber-600 transition-colors">About Us</a></li>
+          </ul>
+
+          <div class="hidden md:flex items-center gap-4">
+            <a href="/login.html" class="text-gray-700 hover:text-amber-600 font-semibold text-sm px-3 py-2 transition-colors">Log In</a>
+            <a href="/signup.html" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="flex md:hidden items-center gap-2">
+            <a href="/signup.html" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs px-3.5 py-2 rounded-full shadow-sm">
+              Sign Up
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" class="p-2 rounded-xl text-gray-700 hover:bg-gray-100 focus:outline-none transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
-  </section>
 
-  <section class="pt-[100px]">
-    <div class="flex flex-col justify-center items-center">
-      <!-- Title Section -->
-      <div class="w-full h-[160px] md:h-[208px] flex items-center justify-center bg-[#eeeeee]">
-        <h1 class="text-3xl md:text-[48px] text-center font-semibold">About Us</h1>
+    <!-- Mobile Drawer & Backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden opacity-0 transition-opacity duration-300 backdrop-blur-xs"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+          <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-9 w-auto" />
+          <button id="mobile-close-btn" type="button" aria-label="Close navigation menu" class="p-2 rounded-full text-gray-500 hover:bg-gray-100 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-2 mt-6">
+          <a href="/index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="/Podcast.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            Podcast
+          </a>
+          <a href="/Books.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            Books &amp; Ebooks
+          </a>
+          <a href="/Blog.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+            Blogs
+          </a>
+          <a href="/about.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-semibold bg-amber-50 text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            About Us
+          </a>
+          <a href="/Faithful/index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            Member Dashboard
+          </a>
+        </nav>
       </div>
 
-      <!-- About Content Section -->
-      <div class="flex flex-col lg:flex-row items-center justify-center w-full bg-[linear-gradient(to_right,_white_88%,_#FFB825_12%)] px-5 py-10 gap-8">
+      <div class="pt-6 border-t border-gray-100 flex flex-col gap-3">
+        <a href="/login.html" class="w-full py-2.5 text-center text-gray-700 hover:text-amber-600 font-semibold border border-gray-200 rounded-xl transition-colors">
+          Log In
+        </a>
+        <a href="/signup.html" class="w-full py-3 text-center bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-xl shadow-md transition-all">
+          Create Free Account
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Title Header -->
+    <header class="pt-28 pb-12 bg-gradient-to-b from-amber-100/50 via-white to-transparent">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs sm:text-sm font-semibold mb-4">
+          Heart Behind the Mission
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-6">
+          About Faith Connect
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Uniting believers from all walks of life, nurturing spiritual depth, and building God's kingdom through love and fellowship.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main About Content Section -->
+    <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-gray-200/80 shadow-md flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        
         <!-- Text Block -->
-        <div class="w-full lg:w-2/3">
-          <p class="text-lg md:text-2xl lg:text-[40px] leading-snug pb-4 pl-2 lg:pl-[20px]">
-            At Faith Connect, our heart's desire is to weave a tapestry of love, support, and spiritual growth, uniting believers from all walks of life in a vibrant community.
+        <div class="w-full lg:w-3/5 space-y-6 text-gray-700">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-snug">
+            A vibrant tapestry of love, mutual support, and spiritual growth.
+          </h2>
+
+          <p class="text-base sm:text-lg leading-relaxed">
+            At <strong class="text-amber-600 font-semibold">Faith Connect</strong>, our heart's desire is to weave a tapestry of love, support, and spiritual growth, uniting believers from all walks of life in a vibrant global community.
           </p>
-          <p class="text-lg md:text-2xl lg:text-[40px] leading-snug pb-4 pl-2 lg:pl-[20px]">
-            We envision a platform where Christians can come together, deepen their faith, and uplift one another on their journey with God.
+
+          <p class="text-base sm:text-lg leading-relaxed">
+            We envision a platform where Christians can come together, deepen their faith, and uplift one another on their journey with God — through inspiring audio teachings, curated books, and genuine prayer partnerships.
           </p>
-          <p class="text-lg md:text-2xl lg:text-[40px] leading-snug pl-2 lg:pl-[20px]">
-            Through meaningful connections, inspiring resources, and heartfelt community, we strive to strengthen the body of Christ, one relationship at a time.
+
+          <p class="text-base sm:text-lg leading-relaxed">
+            Through meaningful connections, rich resources, and heartfelt fellowship, we strive to strengthen the body of Christ, one relationship at a time.
           </p>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="/signup.html" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-7 py-3 rounded-full shadow-md transition-all">
+              Join Our Fellowship
+            </a>
+            <a href="/Podcast.html" class="text-gray-800 hover:text-amber-600 font-bold px-4 py-3 flex items-center gap-2">
+              Listen to Sermons &rarr;
+            </a>
+          </div>
         </div>
 
         <!-- Image Block -->
-        <div class="w-full lg:w-[400px] flex justify-center">
-          <img src="images/hand.png" alt="hand" class="w-[250px] md:w-[300px] lg:w-[400px] h-auto" />
+        <div class="w-full lg:w-2/5 flex justify-center">
+          <div class="relative max-w-sm w-full">
+            <div class="absolute inset-0 bg-amber-300/30 rounded-3xl transform -rotate-3"></div>
+            <img src="images/hand.png" alt="Hands in prayer and unity" class="relative rounded-3xl shadow-xl w-full h-auto object-cover" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</body>
 
+      <!-- Core Values -->
+      <section class="mt-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600">What Drives Us</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Our Core Pillars</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-3xl border border-gray-200/80 shadow-sm">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-6">
+              1
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Sound Biblical Truth</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Grounding every resource, conversation, and study firmly in the Word of God, exalting Jesus Christ in all things.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border border-gray-200/80 shadow-sm">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-6">
+              2
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Authentic Community</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Fostering safe, welcoming, and encouraging spaces where believers can share struggles, celebrate victories, and pray together.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border border-gray-200/80 shadow-sm">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center font-bold text-xl mb-6">
+              3
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Spiritual Empowerment</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Equipping every believer with life-transforming books, audio sermons, and devotionals to walk boldly in their divine calling.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#12161F] text-gray-300 pt-16 pb-8 border-t border-gray-800 mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+          <div class="space-y-4">
+            <a href="/index.html" class="inline-block">
+              <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-10 w-auto brightness-110" />
+            </a>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Connecting believers, strengthening spiritual growth, and nurturing a vibrant Christian community across the globe.
+            </p>
+            <div class="pt-2 space-y-2.5 text-sm text-gray-300">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span>+234 0000011119</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Redemption City, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Quick Links</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+              <li><a href="/Podcast.html" class="hover:text-amber-400 transition-colors">Podcasts</a></li>
+              <li><a href="/Books.html" class="hover:text-amber-400 transition-colors">Christian Books</a></li>
+              <li><a href="/Blog.html" class="hover:text-amber-400 transition-colors">Faith Blog</a></li>
+              <li><a href="/about.html" class="text-amber-400 font-medium">About Faith Connect</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Explore</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/faith-stories.html" class="hover:text-amber-400 transition-colors">Faith Stories</a></li>
+              <li><a href="/children-books.html" class="hover:text-amber-400 transition-colors">Children's Books</a></li>
+              <li><a href="/bible-project.html" class="hover:text-amber-400 transition-colors">Bible Project</a></li>
+              <li><a href="/stepping-in-faith.html" class="hover:text-amber-400 transition-colors">Stepping In Faith</a></li>
+              <li><a href="/a-christian-podcast.html" class="hover:text-amber-400 transition-colors">Kevin Wilson Podcast</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Join Community</h4>
+            <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+              Create a free account to bookmark books, follow podcasts, and join prayer networks.
+            </p>
+            <div class="flex flex-col gap-2.5">
+              <a href="/signup.html" class="text-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-4 py-2.5 rounded-xl transition-all shadow-md">
+                Get Started Free
+              </a>
+              <a href="/login.html" class="text-center border border-gray-700 hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-sm transition-colors">
+                Member Login
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+          <p>&copy; 2026 Faith Connect. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="/about.html" class="hover:text-gray-400">Privacy Policy</a>
+            <a href="/about.html" class="hover:text-gray-400">Terms of Service</a>
+            <a href="/about.html" class="hover:text-gray-400">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/nav.js"></script>
+  </body>
 </html>
