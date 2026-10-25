@@ -233,16 +233,117 @@
           <p class="text-xs text-amber-600 mt-1">Lagos, Nigeria</p>
 
           <div class="flex items-center justify-center gap-3 mt-6">
-            <button id="prev-quote" class="p-2 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors" aria-label="Previous quote">
+            <button id="prev-quote" class="p-2 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors cursor-pointer" aria-label="Previous quote">
               <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
             </button>
-            <button id="next-quote" class="p-2 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors" aria-label="Next quote">
+            <button id="next-quote" class="p-2 rounded-full border border-gray-200 hover:bg-gray-100 transition-colors cursor-pointer" aria-label="Next quote">
               <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
           </div>
         </div>
       </section>
+
+      <!-- Community Prayer Request & Testimony Wall Section -->
+      <section class="mt-20 pt-16 border-t border-gray-200" id="prayer-wall">
+        <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3.5 py-1.5 rounded-full mb-3">
+              <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+              Living Fellowship
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Community Prayer &amp; Testimony Wall</h2>
+            <p class="text-sm text-gray-500 mt-1 max-w-xl">
+              "Carry each other’s burdens, and in this way you will fulfill the law of Christ." — Galatians 6:2
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <span class="text-xs font-semibold text-gray-500" id="prayer-count-display">4 community prayers active</span>
+            <button id="open-prayer-modal-btn" type="button" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold text-xs sm:text-sm rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+              Share Prayer or Testimony
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none" role="tablist">
+          <button type="button" data-filter="all" class="prayer-filter-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-amber-500 text-white shadow-md cursor-pointer">
+            All Prayers &amp; Testimonies
+          </button>
+          <button type="button" data-filter="Healing" class="prayer-filter-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 cursor-pointer">
+            Healing &amp; Strength
+          </button>
+          <button type="button" data-filter="Spiritual" class="prayer-filter-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 cursor-pointer">
+            Spiritual Growth
+          </button>
+          <button type="button" data-filter="Family" class="prayer-filter-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 cursor-pointer">
+            Family &amp; Peace
+          </button>
+          <button type="button" data-filter="Testimony" class="prayer-filter-tab whitespace-nowrap px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-amber-50 border border-gray-200 cursor-pointer">
+            Testimonies &amp; Praise
+          </button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="prayer-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically populated by prayer-wall.js -->
+        </div>
+      </section>
     </main>
+
+    <!-- Prayer Submission Modal -->
+    <div id="prayer-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 hidden">
+      <div id="prayer-modal-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"></div>
+      <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full z-10 overflow-hidden border border-gray-200 flex flex-col max-h-[90vh]">
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
+          <div>
+            <h3 class="text-xl font-extrabold text-gray-900">Share with Community</h3>
+            <p class="text-xs text-gray-500 mt-0.5">Let your brothers and sisters join you in prayer or praise.</p>
+          </div>
+          <button id="close-prayer-modal-btn" type="button" class="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors" aria-label="Close modal">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <form id="prayer-form" class="p-6 space-y-4 overflow-y-auto">
+          <div>
+            <label for="prayer-author-name" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Your Name (Optional)</label>
+            <input type="text" id="prayer-author-name" placeholder="e.g. Sister Sarah or David M." class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-sm outline-none" />
+          </div>
+
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="prayer-is-anonymous" class="rounded text-amber-500 focus:ring-amber-500" />
+            <label for="prayer-is-anonymous" class="text-xs font-medium text-gray-600">Post anonymously as "Anonymous Believer"</label>
+          </div>
+
+          <div>
+            <label for="prayer-category-select" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Category</label>
+            <select id="prayer-category-select" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-amber-500 text-sm bg-white outline-none">
+              <option value="Spiritual Growth">Spiritual Growth &amp; Clarity</option>
+              <option value="Healing & Strength">Healing &amp; Strength</option>
+              <option value="Family & Marriage">Family &amp; Marriage</option>
+              <option value="Financial & Provision">Financial Breakthrough &amp; Provision</option>
+              <option value="Testimony & Thanksgiving">Testimony &amp; Thanksgiving</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="prayer-content" class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1.5">Prayer Request or Praise Report</label>
+            <textarea id="prayer-content" rows="4" required placeholder="Describe your prayer need or share how the Lord answered your prayers..." class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 text-sm outline-none resize-none"></textarea>
+          </div>
+
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-end gap-3">
+            <button type="button" onclick="document.getElementById('prayer-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-colors">
+              Cancel
+            </button>
+            <button type="submit" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all">
+              Post to Wall
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-[#12161F] text-gray-300 pt-16 pb-8 border-t border-gray-800">
@@ -322,6 +423,8 @@
     </footer>
 
     <script src="/js/nav.js"></script>
+    <script src="/js/faith-store.js"></script>
+    <script src="/js/prayer-wall.js"></script>
     <script>
       const quotes = [
         {
