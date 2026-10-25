@@ -1,86 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fictional</title>
+    <title>Christian Fiction Books - Faith Connect</title>
+    <meta name="description" content="Immerse yourself in rich, inspiring Christian fiction, biblical historical novels, and heartwarming redemption stories." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+    </style>
   </head>
-  <body class="m-0 p-0 box-border font-sans bg-[#EEEEEE]">
-    <section class="px-4 sm:px-8 md:px-16 pt-6 sm:pt-8 md:pt-10">
-      <nav class="mb-4">
-        <a href="/Books.html" class="inline-block">
-          <img src="images/arrowLeft.png" class="w-8 h-8 md:w-10 md:h-10" alt="Back to Books" />
-        </a>
-      </nav>
-      <div class="flex flex-col items-center justify-center">
-        <!-- Responsive heading -->
-        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-          Fictional Books
-        </h2>
-            
-            <!-- Book 1: The Days of Elijah -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-[20px] items-center sm:items-start mt-6 sm:mt-8 md:mt-10 px-4 sm:px-0">
-                <div class="flex-shrink-0">
-                    <img
-                        src="images/elijah.png"
-                        class="w-[200px] h-[300px] sm:w-[250px] sm:h-[375px] md:w-[275px] md:h-[413px] lg:w-[325px] lg:h-[488px]"
-                        alt="The Days of Elijah"
-                    />
-                </div>
-                <div class="text-center sm:text-left">
-                    <p class="text-xl sm:text-2xl md:text-3xl">The Days of Elijah</p>
-                    <p class="text-xl sm:text-2xl md:text-3xl">by <span class="font-bold">Nobel,John</span></p>
-                </div>
-            </div>
-            
-            <!-- Book 2: Love comes softly -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-[20px] items-center sm:items-start mt-6 sm:mt-8 md:mt-10 px-4 sm:px-0">
-                <div class="flex-shrink-0">
-                    <img
-                        src="images/softly.png"
-                        class="w-[200px] h-[300px] sm:w-[250px] sm:h-[375px] md:w-[275px] md:h-[413px] lg:w-[325px] lg:h-[488px]"
-                        alt="Love comes softly"
-                    />
-                </div>
-                <div class="text-center sm:text-left">
-                    <p class="text-xl sm:text-2xl md:text-3xl">Love comes softly</p>
-                    <p class="text-xl sm:text-2xl md:text-3xl">
-                        by <span class="font-bold">Janette Oke</span>
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Book 3: The Days of Joseph -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-[20px] items-center sm:items-start mt-6 sm:mt-8 md:mt-10 px-4 sm:px-0">
-                <div class="flex-shrink-0">
-                    <img
-                        src="images/joseph.png"
-                        class="w-[200px] h-[300px] sm:w-[250px] sm:h-[375px] md:w-[275px] md:h-[413px] lg:w-[325px] lg:h-[488px]"
-                        alt="The Days of joseph"
-                    />
-                </div>
-                <div class="text-center sm:text-left">
-                    <p class="text-xl sm:text-2xl md:text-3xl">The Days of Joseph</p>
-                    <p class="text-xl sm:text-2xl md:text-3xl">by <span class="font-bold">Nobel,John</span></p>
-                </div>
-            </div>
-            
-            <!-- Book 4: The Lost Brother -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-[20px] items-center sm:items-start mt-6 sm:mt-8 md:mt-10 px-4 sm:px-0 sm:mr-0 md:mr-5 lg:mr-10">
-                <div class="flex-shrink-0">
-                    <img
-                        src="images/brother.png"
-                        class="w-[200px] h-[300px] sm:w-[250px] sm:h-[375px] md:w-[275px] md:h-[413px] lg:w-[325px] lg:h-[488px]"
-                        alt="The Lost Brother"
-                    />
-                </div>
-                <div class="text-center sm:text-left">
-                    <p class="text-xl sm:text-2xl md:text-3xl">The Lost Brother</p>
-                    <p class="text-xl sm:text-2xl md:text-3xl">by <span class="font-bold">Nobel,John</span></p>
-                </div>
-            </div>
+  <body class="m-0 p-0 box-border bg-[#FCFBF7] text-[#222] overflow-x-hidden antialiased">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm fixed top-0 w-full z-50 transition-all duration-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3 transition-transform hover:scale-102">
+            <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-10 sm:h-12 w-auto object-contain" />
+          </a>
+
+          <ul class="hidden md:flex items-center gap-8 lg:gap-10 list-none">
+            <li><a href="/index.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Home</a></li>
+            <li><a href="/Podcast.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Podcast</a></li>
+            <li><a href="/Books.html" class="font-semibold text-amber-600 transition-colors">Books</a></li>
+            <li><a href="/Blog.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">Blogs</a></li>
+            <li><a href="/about.html" class="font-medium text-gray-700 hover:text-amber-500 transition-colors">About Us</a></li>
+          </ul>
+
+          <div class="hidden md:flex items-center gap-4">
+            <a href="/login.html" class="text-gray-700 hover:text-amber-600 font-semibold text-sm px-3 py-2 transition-colors">Log In</a>
+            <a href="/signup.html" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+              Sign Up
+            </a>
+          </div>
+
+          <div class="flex md:hidden items-center gap-2">
+            <a href="/signup.html" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs px-3.5 py-2 rounded-full shadow-sm">
+              Sign Up
+            </a>
+            <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" class="p-2 rounded-xl text-gray-700 hover:bg-gray-100 focus:outline-none transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
         </div>
-    </section>
-</body>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer & Backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 z-50 hidden opacity-0 transition-opacity duration-300 backdrop-blur-xs"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+          <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-9 w-auto" />
+          <button id="mobile-close-btn" type="button" aria-label="Close navigation menu" class="p-2 rounded-full text-gray-500 hover:bg-gray-100 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-2 mt-6">
+          <a href="/index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Home
+          </a>
+          <a href="/Podcast.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
+            Podcast
+          </a>
+          <a href="/Books.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-semibold bg-amber-50 text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            Books &amp; Ebooks
+          </a>
+          <a href="/Blog.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+            Blogs
+          </a>
+          <a href="/about.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            About Us
+          </a>
+          <a href="/Faithful/index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+            Member Dashboard
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-gray-100 flex flex-col gap-3">
+        <a href="/login.html" class="w-full py-2.5 text-center text-gray-700 hover:text-amber-600 font-semibold border border-gray-200 rounded-xl transition-colors">
+          Log In
+        </a>
+        <a href="/signup.html" class="w-full py-3 text-center bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-xl shadow-md transition-all">
+          Create Free Account
+        </a>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="pt-28 pb-10 bg-gradient-to-b from-amber-100/40 via-white to-transparent">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="/Books.html" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-amber-600 mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Back to all books
+        </a>
+
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs sm:text-sm font-semibold mb-3">
+            Inspirational Storytelling
+          </span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+            Christian Fiction
+          </h1>
+          <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+            Captivating stories of grace, historical biblical epics, and redemption sagas that illuminate faith through gripping storytelling.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Books List Section -->
+    <main class="py-10">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <!-- Book 1: The Days of Elijah -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-full md:w-2/5 shrink-0 flex justify-center">
+            <img src="images/elijah.png" alt="The Days of Elijah" class="w-56 sm:w-64 h-auto rounded-2xl shadow-md object-contain" />
+          </div>
+          <div class="w-full md:w-3/5 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+              Biblical Epic &bull; Prophetic Fiction
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+              The Days of Elijah
+            </h2>
+            <p class="text-sm font-semibold text-gray-500">
+              by <span class="text-gray-900 font-bold">John Noble</span>
+            </p>
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+              Step into the dramatic era of prophets and kings where faith stood against overwhelming idolatry. A thrilling historical narrative capturing God's fire and supernatural provision on Mount Carmel.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="/Faithful/index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Read in Reader
+              </a>
+              <button type="button" class="inline-flex items-center gap-2 border border-gray-200 hover:border-amber-500 text-gray-700 hover:text-amber-600 font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                Save to Library
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2: Love Comes Softly -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-full md:w-2/5 shrink-0 flex justify-center">
+            <img src="images/softly.png" alt="Love Comes Softly" class="w-56 sm:w-64 h-auto rounded-2xl shadow-md object-contain" />
+          </div>
+          <div class="w-full md:w-3/5 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+              Pioneer Romance &bull; Classic Fiction
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+              Love Comes Softly
+            </h2>
+            <p class="text-sm font-semibold text-gray-500">
+              by <span class="text-gray-900 font-bold">Janette Oke</span>
+            </p>
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+              The beloved classic of tragic loss transformed into enduring faith and patient love on the rugged American prairie. A heart-tugging reminder that God's grace blossoms in the most unexpected seasons.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="/Faithful/index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Read in Reader
+              </a>
+              <button type="button" class="inline-flex items-center gap-2 border border-gray-200 hover:border-amber-500 text-gray-700 hover:text-amber-600 font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                Save to Library
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3: The Days of Joseph -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-full md:w-2/5 shrink-0 flex justify-center">
+            <img src="images/joseph.png" alt="The Days of Joseph" class="w-56 sm:w-64 h-auto rounded-2xl shadow-md object-contain" />
+          </div>
+          <div class="w-full md:w-3/5 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+              Biblical Drama &bull; Redemption
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+              The Days of Joseph
+            </h2>
+            <p class="text-sm font-semibold text-gray-500">
+              by <span class="text-gray-900 font-bold">John Noble</span>
+            </p>
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+              From betrayal and the pit to the palace of Egypt, this vivid retelling shows how God turns evil into good and preserves His covenant people through famine and hardship.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="/Faithful/index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Read in Reader
+              </a>
+              <button type="button" class="inline-flex items-center gap-2 border border-gray-200 hover:border-amber-500 text-gray-700 hover:text-amber-600 font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                Save to Library
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 4: The Lost Brother -->
+        <article class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200/80 flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-full md:w-2/5 shrink-0 flex justify-center">
+            <img src="images/brother.png" alt="The Lost Brother" class="w-56 sm:w-64 h-auto rounded-2xl shadow-md object-contain" />
+          </div>
+          <div class="w-full md:w-3/5 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
+              Grace &bull; Reconciliation
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
+              The Lost Brother
+            </h2>
+            <p class="text-sm font-semibold text-gray-500">
+              by <span class="text-gray-900 font-bold">John Noble</span>
+            </p>
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+              A moving story examining brotherhood, jealousy, repentance, and the overwhelming heart of the Father welcoming home the broken wanderer.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="/Faithful/index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold text-sm px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                Read in Reader
+              </a>
+              <button type="button" class="inline-flex items-center gap-2 border border-gray-200 hover:border-amber-500 text-gray-700 hover:text-amber-600 font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+                Save to Library
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#12161F] text-gray-300 pt-16 pb-8 border-t border-gray-800 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+          <div class="space-y-4">
+            <a href="/index.html" class="inline-block">
+              <img src="/images/Faith connect logo.png" alt="Faith Connect Logo" class="h-10 w-auto brightness-110" />
+            </a>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Connecting believers, strengthening spiritual growth, and nurturing a vibrant Christian community across the globe.
+            </p>
+            <div class="pt-2 space-y-2.5 text-sm text-gray-300">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                <span>+234 0000011119</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Redemption City, Nigeria</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Quick Links</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+              <li><a href="/Podcast.html" class="hover:text-amber-400 transition-colors">Podcasts</a></li>
+              <li><a href="/Books.html" class="text-amber-400 font-medium">Christian Books</a></li>
+              <li><a href="/Blog.html" class="hover:text-amber-400 transition-colors">Faith Blog</a></li>
+              <li><a href="/about.html" class="hover:text-amber-400 transition-colors">About Faith Connect</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Explore</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="/faith-stories.html" class="hover:text-amber-400 transition-colors">Faith Stories</a></li>
+              <li><a href="/children-books.html" class="hover:text-amber-400 transition-colors">Children's Books</a></li>
+              <li><a href="/bible-project.html" class="hover:text-amber-400 transition-colors">Bible Project</a></li>
+              <li><a href="/stepping-in-faith.html" class="hover:text-amber-400 transition-colors">Stepping In Faith</a></li>
+              <li><a href="/a-christian-podcast.html" class="hover:text-amber-400 transition-colors">Kevin Wilson Podcast</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold text-base tracking-wider uppercase mb-5">Join Community</h4>
+            <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+              Create a free account to bookmark books, follow podcasts, and join prayer networks.
+            </p>
+            <div class="flex flex-col gap-2.5">
+              <a href="/signup.html" class="text-center bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-4 py-2.5 rounded-xl transition-all shadow-md">
+                Get Started Free
+              </a>
+              <a href="/login.html" class="text-center border border-gray-700 hover:border-gray-500 text-gray-300 px-4 py-2 rounded-xl text-sm transition-colors">
+                Member Login
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+          <p>&copy; 2026 Faith Connect. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="/about.html" class="hover:text-gray-400">Privacy Policy</a>
+            <a href="/about.html" class="hover:text-gray-400">Terms of Service</a>
+            <a href="/about.html" class="hover:text-gray-400">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/nav.js"></script>
+  </body>
 </html>
